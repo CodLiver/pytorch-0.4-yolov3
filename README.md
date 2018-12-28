@@ -1,4 +1,4 @@
-# pytorch-0.4-yolov3 : Yet Another Implimentation of Pytroch 0.4 and YoloV3
+# pytorch-0.4-yolov3 : Yet Another Implimentation of Pytroch 0.41 or over and YoloV3
 ## This repository is created for implmentation of yolov3 with pytorch 0.4 from marvis/pytorch-yolo2. 
 This repository is forked from great work pytorch-yolo2 of @github/marvis, 
 but I couldn't upload or modify directly to marvis source files because many files were changed even filenames.
@@ -90,7 +90,7 @@ save plot results to predictions.jpg
 valid.py data/yourown.data cfg/yourown.cfg yourown_weights
 ```
 
-### Performances for voc datasets using yolov2 
+### Performances for voc datasets using yolov2 (with 100 epochs training)
 - CrossEntropyLoss is used to compare classes
 - Performances are varied along to the weighting factor, for example.
 ```
@@ -107,6 +107,8 @@ Finally, I got the
 anchors = 1.1468, 1.5021, 2.7780, 3.4751, 4.3845, 7.0162, 8.2523, 4.2100, 9.7340, 8.682
 coord_scale=1, object_scale=3, class_scale=1 mAP = 74.4  
 ```
+
+- using yolov3 with self.rescore = 1 and latest code, ___mAP = 74.9___. (with 170 epochs training)
 
 Therefore, you may do many experiments to get the best performances.
 
